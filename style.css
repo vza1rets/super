@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ff0000; /* Фон страницы красный */
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 4px solid #111111; /* Цветная обводка карточки (зеленая) */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 600px; /* Ширина карточки */
+    margin: auto;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.5s forwards;
+    position: relative; /* Для обводки */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #ff0000; /* Цвет заголовка (желтый) */
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.2s;
+}
+
+h2 {
+    color: #ff3c00; /* Цвет подзаголовков (голубой) */
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.4s;
+}
+
+span {
+    color: #ff6600; /* Цвет для текста (оранжевый) */
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact, .abilities, .info, .gallery {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    transition: transform 0.3s;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.hero-image:hover {
+    transform: scale(1.1);
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gallery-image {
+    width: 120px; /* Ширина изображений в галерее */
+    height: auto;
+    border-radius: 10px;
+    margin: 5px;
+    transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+}
